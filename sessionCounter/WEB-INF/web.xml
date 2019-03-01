@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<web-app xmlsn="http://java.sun.com/xml/ns/j2ee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd"
+	version="2.4">
+
+	<servlet>
+		<servlet-name>sessionCounter</servlet-name>
+		<servlet-class>com.example.SCTester</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>sessionCounter</servlet-name>
+		<url-pattern>/SCTest.do</url-pattern>
+	</servlet-mapping>
+<!-- 
+	<context-param>
+		<param-name>breed</param-name>
+		<param-value>Great Dane</param-value>
+	</context-param>
+ -->
+<!-- 	<listener>
+		<listener-class>
+			com.example.MyServletContextListener
+		</listener-class>
+	</listener> -->
+	<listener>
+		<listener-class>
+			com.example.BeerSessionCounter
+		</listener-class>
+	</listener>
+	<listener>
+		<listener-class>
+			com.example.BeerAttributeListener
+		</listener-class>
+	</listener>
+
+</web-app>
